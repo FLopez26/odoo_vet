@@ -1,0 +1,19 @@
+<odoo>
+<!-- Menús -->
+<menuitem 
+    id="vet_menu" 
+    name="Veterinaria"
+    sequence="10"/>
+<menuitem 
+    id="vet_mascota_menu" 
+    parent="vet_menu" 
+    name="Mascotas" 
+    action="vet_mascota_action" 
+    sequence="20"/>
+<menuitem 
+    id="vet_cita_menu"
+    parent="vet_menu"
+    name="Citas"
+    action="vet_cita_action"
+    sequence="30"/>
+</odoo>

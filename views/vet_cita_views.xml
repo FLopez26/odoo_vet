@@ -1,0 +1,40 @@
+<odoo>
+<!-- Vistas Citas -->
+<record id="vet_cita_action" model="ir.actions.act_window">
+    <field name="name">Citas</field>
+    <field name="res_model">vet.cita</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<record id="vet_cita_tree_view" model="ir.ui.view">
+    <field name="name">vet.cita.tree</field>
+    <field name="model">vet.cita</field>
+    <field name="arch" type="xml">
+        <tree string="Citas">
+            <field name="fecha"/>
+            <field name="motivo"/>
+            <field name="mascota_id"/>
+        </tree>
+    </field>
+</record>
+
+<record id="vet_cita_form_view" model="ir.ui.view">
+    <field name="name">vet.cita.form</field>
+    <field name="model">vet.cita</field>
+    <field name="arch" type="xml">
+        <form string="Cita">
+            <sheet>
+                <group>
+                    <field name="fecha"/>
+                    <field name="motivo"/>
+                    <field name="mascota_id"/>
+                    <field name="veterinario_ids" domain="[('es_veterinario', '=', True)]"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+    
+
+</odoo>

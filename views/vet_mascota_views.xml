@@ -1,0 +1,44 @@
+<odoo>
+<!-- Vistas Mascotas -->
+<record id="vet_mascota_action" model="ir.actions.act_window">
+    <field name="name">Mascotas</field>
+    <field name="res_model">vet.mascota</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+<record id="vet_mascota_tree_view" model="ir.ui.view">
+    <field name="name">vet.mascota.tree</field>
+    <field name="model">vet.mascota</field>
+    <field name="arch" type="xml">
+        <tree string="Mascotas">
+            <field name="nombre"/>
+            <field name="especie"/>
+            <field name="raza"/>
+            <field name="edad"/>
+            <field name="propietario_id"/>
+            <field name="veterinario_cabecera_id"/>
+        </tree>
+    </field>
+</record>
+
+<record id="vet_mascota_form_view" model="ir.ui.view">
+    <field name="name">vet.mascota.form</field>
+    <field name="model">vet.mascota</field>
+    <field name="arch" type="xml">
+        <form string="Mascota">
+            <sheet>
+                <group>
+                    <field name="nombre"/>
+                    <field name="especie"/>
+                    <field name="raza"/>
+                    <field name="edad"/>
+                    <field name="propietario_id" domain="[('es_propietario_mascota', '=', True)]"/>
+                    <field name="veterinario_cabecera_id" domain="[('es_veterinario', '=', True)]"/>
+                    <field name="cita_ids"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
+</odoo>

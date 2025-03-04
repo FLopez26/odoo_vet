@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vet_mascota,access_vet_mascota,model_vet_mascota,base.group_user,1,1,1,1
+access_vet_cita,access_vet_cita,model_vet_cita,base.group_user,1,1,1,1
+access_res_partner,access_res_partner,model_res_partner,base.group_user,1,1,1,1
